@@ -4,7 +4,7 @@ function Footer(): JSX.Element {
       <h5>
         {" "}
         Made by Tiffany Wilmot-Simpson @ Academy{" "}
-        <small>date: March 07,2022</small>
+        <small>Date: March 09,2022</small>
       </h5>
     </footer>
   );
