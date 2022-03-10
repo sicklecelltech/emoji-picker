@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function MainContent(): JSX.Element {
   const [emojiValueFromCurrentRender, queueRerenderedWithNewEmojiValue] =
-    useState("happy");
+    useState("");
   const [emojiValueFromPreviousRender, queueRerenderedWithPreviousEmojiValue] =
     useState("");
 
