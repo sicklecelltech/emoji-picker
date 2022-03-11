@@ -2,9 +2,9 @@ import { useState } from "react";
 
 function MainContent(): JSX.Element {
   const [emojiValueFromCurrentRender, queueRerenderedWithNewEmojiValue] =
-    useState("");
+    useState("happy");
   const [emojiValueFromPreviousRender, queueRerenderedWithPreviousEmojiValue] =
-    useState<string[]>([""]);
+    useState<string[]>(["happy"]);
 
   const happyEmoji = () => {
     const nextEmoji = "happy";
@@ -72,7 +72,7 @@ function MainContent(): JSX.Element {
   return (
     <>
       <h2> Emoji Picker</h2>
-      <p>Your Previous Emoji: {emojiValueFromPreviousRender.join(" ")} </p>
+      <p>Your Previous Emoji: {emojiValueFromPreviousRender.join(" ,")} </p>
       <p>Your Current Emoji: {emojiValueFromCurrentRender}</p>
       <button onClick={happyEmoji}>😃</button>
       <button onClick={fineEmoji}>🙃</button>
@@ -81,8 +81,19 @@ function MainContent(): JSX.Element {
       <button onClick={sleepyEmoji}>😴</button>
       <button onClick={confusedEmoji}>😵</button>
       <button onClick={excitedEmoji}>🤯</button>
+      <p>{emojiValueFromPreviousRender.map(makeList)}</p>
     </>
   );
+}
+
+function makeList(str:string){
+  return (
+    <>
+     <ul>
+      <li>{str} </li>
+    </ul>
+    </>
+  )
 }
 
 export default MainContent;
