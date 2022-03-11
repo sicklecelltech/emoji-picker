@@ -86,14 +86,14 @@ function MainContent(): JSX.Element {
   );
 }
 
-function makeList(str:string){
+function makeList(str: string) {
   return (
     <>
-     <ul>
-      <li>{str} </li>
-    </ul>
+      <ul>
+        <li>{str} </li>
+      </ul>
     </>
-  )
+  );
 }
 
 export default MainContent;
